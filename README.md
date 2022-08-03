@@ -1,0 +1,2 @@
+# Employee-Satisfaction-Predictor
+This is an employee satisfaction predictor ML model. The satisfaction index is calculated as a number between 0 and 1. If the employee's satisfaction rate comes out to be less than 0.5, he is not satisfied. If it comes out to be above 0.5, he is satisfied with around 75% accuracy. The final accuracy is calculated using the best regressor, which is the gradient boosting regressor. 
