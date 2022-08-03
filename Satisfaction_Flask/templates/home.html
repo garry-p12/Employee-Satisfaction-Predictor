@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Employee satisfaction predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+  <h1>Predict Employee satisfaction</h1>
+     <h3> Enter the following values to predict whether the employee is satisfied or not</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="\predict"method="post">
+      <input type="text" name="department" placeholder="Department" required="required" />
+        <input type="text" name="n_projects" placeholder="Projects completed" required="required" />
+    <input type="text" name="salary" placeholder="Salary level(0 for low, 1 for medium,2 for high)" required="required" />
+    <input type="text" name="status" placeholder="Status(0 for left, 1 for employed)" required="required" />
+    <input type="text" name="tenure" placeholder="Tenure" required="required" />
+    <input type="text" name="age" placeholder="Age" required="required" />
+    <input type="text" name="rating" placeholder="Rating" required="required" />
+    <input type="text" name="salary.1" placeholder="Raw salary" required="required" />
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
